@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
 
 const industries = [
   { name: "Retail IT", blurb: "Store systems, e-commerce, and supply chain operations." },
@@ -27,8 +28,8 @@ const industries = [
           built on 25 years of hard-won best practices.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-accent">Talk to an engineer</a>
-          <a href="/services" class="btn btn-outline">See how we work</a>
+          <a href={withBase("/contact")} class="btn btn-accent">Talk to an engineer</a>
+          <a href={withBase("/services")} class="btn btn-outline">See how we work</a>
         </div>
       </div>
       <div class="hero-stats">
@@ -121,7 +122,7 @@ const industries = [
           hands-on engineering support — and we'll tell you honestly whether we can help.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-accent">Get in touch</a>
+          <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
         </div>
       </div>
     </div>

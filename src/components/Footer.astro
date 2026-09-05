@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../lib/url";
+
 const year = new Date().getFullYear();
 ---
 
@@ -6,7 +8,7 @@ const year = new Date().getFullYear();
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a href="/" class="logo">
+        <a href={withBase("/")} class="logo">
           <span class="logo-mark"></span>
           CausewayAI
         </a>
@@ -16,10 +18,10 @@ const year = new Date().getFullYear();
       </div>
       <div>
         <h4>Company</h4>
-        <a href="/services">Services</a>
-        <a href="/industries">Industries</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href={withBase("/services")}>Services</a>
+        <a href={withBase("/industries")}>Industries</a>
+        <a href={withBase("/about")}>About</a>
+        <a href={withBase("/contact")}>Contact</a>
       </div>
       <div>
         <h4>Get in touch</h4>

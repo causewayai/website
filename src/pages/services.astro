@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
 
 const services = [
   {
@@ -73,7 +74,7 @@ const services = [
         <h2>Not sure which engagement fits?</h2>
         <p>Send us a few sentences about where you're stuck, and we'll point you to the right starting place.</p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-accent">Get in touch</a>
+          <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
         </div>
       </div>
     </div>

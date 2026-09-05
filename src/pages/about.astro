@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
 ---
 
 <Layout
@@ -86,7 +87,7 @@ import Layout from "../layouts/Layout.astro";
         <h2>Want to know if we're the right fit?</h2>
         <p>The best way to find out is a conversation, not a pitch deck.</p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-accent">Get in touch</a>
+          <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
         </div>
       </div>
     </div>

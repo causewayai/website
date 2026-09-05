@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
 
 const industries = [
   {
@@ -68,7 +69,7 @@ const industries = [
           businesses well beyond this list. Tell us about your environment.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="btn btn-accent">Get in touch</a>
+          <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
         </div>
       </div>
     </div>

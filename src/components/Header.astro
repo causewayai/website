@@ -1,18 +1,20 @@
 ---
+import { withBase } from "../lib/url";
+
 const { current = "" } = Astro.props;
 
 const links = [
-  { href: "/", label: "Home", key: "home" },
-  { href: "/services", label: "Services", key: "services" },
-  { href: "/industries", label: "Industries", key: "industries" },
-  { href: "/about", label: "About", key: "about" },
-  { href: "/contact", label: "Contact", key: "contact" },
+  { href: withBase("/"), label: "Home", key: "home" },
+  { href: withBase("/services"), label: "Services", key: "services" },
+  { href: withBase("/industries"), label: "Industries", key: "industries" },
+  { href: withBase("/about"), label: "About", key: "about" },
+  { href: withBase("/contact"), label: "Contact", key: "contact" },
 ];
 ---
 
 <header class="site-header">
   <div class="wrap">
-    <a href="/" class="logo">
+    <a href={withBase("/")} class="logo">
       <span class="logo-mark"></span>
       CausewayAI
     </a>
@@ -23,7 +25,7 @@ const links = [
         </a>
       ))}
     </nav>
-    <a href="/contact" class="btn btn-primary header-cta">Get in touch</a>
+    <a href={withBase("/contact")} class="btn btn-primary header-cta">Get in touch</a>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
     </button>
