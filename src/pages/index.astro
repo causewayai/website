@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const industries = [
+  { name: "Retail IT", blurb: "Store systems, e-commerce, and supply chain operations." },
+  { name: "Life Sciences", blurb: "Research, clinical, and lab operations at scale." },
+  { name: "Food Services", blurb: "Operations, safety, and logistics under tight margins." },
+  { name: "Pharmaceuticals", blurb: "Regulated manufacturing, quality, and compliance." },
+  { name: "Insurance", blurb: "Underwriting, claims, and risk operations." },
+  { name: "Cybersecurity", blurb: "Threat operations and secure-by-design engineering." },
+];
+---
+
+<Layout
+  title="Forward-Deployed AI Engineering for the Enterprise"
+  description="CausewayAI embeds forward-deployed engineers with your team to operationalize AI, backed by 25 years of enterprise experience across retail, life sciences, food service, pharma, insurance, and cybersecurity."
+  current="home"
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Forward-Deployed AI Engineering</p>
+        <h1>The bridge between legacy operations and AI-ready enterprise.</h1>
+        <p class="lead">
+          CausewayAI puts senior engineers inside your team — not behind a slide deck — to help
+          you adopt AI the way it has to work in a real enterprise: safely, operationally, and
+          built on 25 years of hard-won best practices.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn-accent">Talk to an engineer</a>
+          <a href="/services" class="btn btn-outline">See how we work</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="num">25 yrs</div>
+          <p class="label">Enterprise engineering experience</p>
+        </div>
+        <div class="stat-card">
+          <div class="num">6</div>
+          <p class="label">Regulated industries served</p>
+        </div>
+        <div class="stat-card">
+          <div class="num">Embedded</div>
+          <p class="label">Engineers work inside your stack</p>
+        </div>
+        <div class="stat-card">
+          <div class="num">Zero</div>
+          <p class="label">Tolerance for shelfware pilots</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why CausewayAI</p>
+        <h2>AI adoption fails on operations, not models.</h2>
+        <p>
+          Most AI initiatives stall not because the model is wrong, but because the surrounding
+          operating model isn't ready — unclear ownership, missing guardrails, and pilots that
+          were never designed to survive contact with production. We close that gap.
+        </p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon-badge">01</div>
+          <h3>Forward-Deployed Engineers</h3>
+          <p>
+            Our engineers sit with your team, in your systems, solving your actual problems —
+            not generic ones from a deck.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon-badge">02</div>
+          <h3>Enterprise-Grade Best Practices</h3>
+          <p>
+            25 years of experience in regulated, high-stakes environments means we build for
+            security, compliance, and audit from day one.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon-badge">03</div>
+          <h3>Pilot-to-Production Discipline</h3>
+          <p>
+            We treat "it worked in the demo" as the starting line, not the finish line, and
+            engineer accordingly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Industries</p>
+        <h2>Deep experience where the stakes are highest.</h2>
+      </div>
+      <div class="industry-list">
+        {industries.map((ind) => (
+          <div class="industry-item">
+            <span class="dot"></span>
+            <div>
+              <h4>{ind.name}</h4>
+              <p>{ind.blurb}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to make AI operational, not experimental?</h2>
+        <p>
+          Tell us where you're stuck — pilot purgatory, unclear governance, or a team that needs
+          hands-on engineering support — and we'll tell you honestly whether we can help.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn-accent">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+  {
+    title: "Forward-Deployed AI Engineering",
+    desc: "Senior engineers embed directly with your team and your codebase — not off in a separate innovation lab. We ship inside your existing stack, tools, and review processes, so what we build is something your team can actually own the day we leave.",
+    points: [
+      "Embedded, hands-on engineering — not slideware or workshops",
+      "Works within your existing tooling, security, and review process",
+      "Knowledge transfer built in from day one",
+    ],
+  },
+  {
+    title: "AI Operating Model & Best Practices",
+    desc: "Most AI failures are operating-model failures: unclear ownership, missing evaluation criteria, no guardrails for what the model is and isn't allowed to do. We design the governance, review, and evaluation practices that let AI adoption scale safely.",
+    points: [
+      "Governance and approval workflows suited to regulated environments",
+      "Evaluation and monitoring practices for production AI systems",
+      "Risk, security, and compliance built in, not bolted on",
+    ],
+  },
+  {
+    title: "Pilot-to-Production Acceleration",
+    desc: "A promising demo and a production system are two different things. We take pilots that stalled — or that leadership is nervous about shipping — and re-engineer them to meet the bar your IT, security, and compliance teams actually require.",
+    points: [
+      "Hardening pilots for real production traffic and data",
+      "Closing the gaps that block security and compliance sign-off",
+      "Clear handoff so the system doesn't depend on us forever",
+    ],
+  },
+];
+---
+
+<Layout
+  title="Services"
+  description="Forward-deployed AI engineering, operating model design, and pilot-to-production acceleration for enterprise teams adopting AI."
+  current="services"
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h1>Engineering support built for how enterprises actually adopt AI.</h1>
+      <p class="lead">
+        We don't hand you a strategy deck and disappear. CausewayAI engineers work alongside your
+        team to design, build, and operationalize AI systems that hold up under real production
+        conditions — and real regulatory scrutiny.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="timeline">
+        {services.map((service) => (
+          <div class="timeline-item">
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
+            <ul style="color: var(--slate-600); padding-left: 20px; margin: 0;">
+              {service.points.map((point) => (
+                <li style="margin-bottom: 6px;">{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Not sure which engagement fits?</h2>
+        <p>Send us a few sentences about where you're stuck, and we'll point you to the right starting place.</p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn-accent">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

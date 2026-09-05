@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const industries = [
+  {
+    name: "Retail IT",
+    blurb: "25 years of experience keeping store systems, e-commerce platforms, and supply chains running at scale. We know how AI has to fit around peak-season traffic and razor-thin tolerance for downtime.",
+  },
+  {
+    name: "Life Sciences",
+    blurb: "Deep familiarity with research and lab operations, where data integrity and traceability aren't optional. We build AI systems that respect the rigor this field demands.",
+  },
+  {
+    name: "Food Services",
+    blurb: "Operations, safety, and logistics under tight margins and constant operational pressure. We design AI support that fits real-world operational tempo, not a lab environment.",
+  },
+  {
+    name: "Pharmaceuticals",
+    blurb: "Regulated manufacturing, quality systems, and compliance workflows where mistakes have real consequences. Our engineering practices are built around audit and validation from the start.",
+  },
+  {
+    name: "Insurance",
+    blurb: "Underwriting, claims, and risk operations where accuracy and explainability matter as much as speed. We help teams apply AI without compromising the controls the business relies on.",
+  },
+  {
+    name: "Cybersecurity",
+    blurb: "Threat operations and secure-by-design engineering are in our background, not an afterthought. Every system we build is engineered with security as a first-class requirement.",
+  },
+];
+---
+
+<Layout
+  title="Industries"
+  description="25 years of enterprise engineering experience across Retail IT, Life Sciences, Food Services, Pharmaceuticals, Insurance, and Cybersecurity."
+  current="industries"
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Industries</p>
+      <h1>25 years of experience in the industries where getting it wrong is expensive.</h1>
+      <p class="lead">
+        We've spent our careers inside regulated, high-stakes, operationally complex businesses.
+        That background shapes every AI engagement we take on — we design for the constraints
+        your industry actually has, not the ones a generic playbook assumes.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid grid-2">
+        {industries.map((ind) => (
+          <div class="card">
+            <h3>{ind.name}</h3>
+            <p>{ind.blurb}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Don't see your industry?</h2>
+        <p>
+          Our engineering practices transfer across regulated and operationally complex
+          businesses well beyond this list. Tell us about your environment.
+        </p>
+        <div class="hero-actions">
+          <a href="/contact" class="btn btn-accent">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
