@@ -1,33 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { withBase } from "../lib/url";
-
-const industries = [
-  {
-    name: "Retail IT",
-    blurb: "25 years of experience keeping store systems, e-commerce platforms, and supply chains running at scale. We know how AI has to fit around peak-season traffic and razor-thin tolerance for downtime.",
-  },
-  {
-    name: "Life Sciences",
-    blurb: "Deep familiarity with research and lab operations, where data integrity and traceability aren't optional. We build AI systems that respect the rigor this field demands.",
-  },
-  {
-    name: "Food Services",
-    blurb: "Operations, safety, and logistics under tight margins and constant operational pressure. We design AI support that fits real-world operational tempo, not a lab environment.",
-  },
-  {
-    name: "Pharmaceuticals",
-    blurb: "Regulated manufacturing, quality systems, and compliance workflows where mistakes have real consequences. Our engineering practices are built around audit and validation from the start.",
-  },
-  {
-    name: "Insurance",
-    blurb: "Underwriting, claims, and risk operations where accuracy and explainability matter as much as speed. We help teams apply AI without compromising the controls the business relies on.",
-  },
-  {
-    name: "Cybersecurity",
-    blurb: "Threat operations and secure-by-design engineering are in our background, not an afterthought. Every system we build is engineered with security as a first-class requirement.",
-  },
-];
+import { industries } from "../lib/industries";
 ---
 
 <Layout
@@ -53,7 +27,7 @@ const industries = [
         {industries.map((ind) => (
           <div class="card">
             <h3>{ind.name}</h3>
-            <p>{ind.blurb}</p>
+            <p>{ind.longBlurb}</p>
           </div>
         ))}
       </div>
