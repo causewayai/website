@@ -25,11 +25,19 @@ import { industries } from "../lib/industries";
         </div>
       </div>
       <div class="hero-stats">
-        <a href={withBase("/industries")} class="stat-card stat-card-link">
+        <a
+          href={withBase("/industries")}
+          class="stat-card stat-card-link"
+          aria-label="Enterprise engineering experience — view industries"
+        >
           <div class="num">25 yrs</div>
           <p class="label">Enterprise engineering experience</p>
         </a>
-        <a href={withBase("/industries")} class="stat-card stat-card-link">
+        <a
+          href={withBase("/industries")}
+          class="stat-card stat-card-link"
+          aria-label="Regulated industries served — view industries"
+        >
           <div class="num">{industries.length}</div>
           <p class="label">Regulated industries served</p>
         </a>

@@ -244,10 +244,21 @@ nav.main-nav a[aria-current="page"] {
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 
+.stat-card-link .label {
+  text-decoration: underline;
+  text-decoration-color: var(--slate-400);
+  text-underline-offset: 3px;
+}
+
 .stat-card-link:hover,
 .stat-card-link:focus-visible {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.stat-card-link:hover .label,
+.stat-card-link:focus-visible .label {
+  text-decoration-color: var(--accent);
 }
 
 /* Sections */
