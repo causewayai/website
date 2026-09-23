@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
+
+const steps = [
+  {
+    title: "Initial Consultation",
+    desc: "We start by understanding the problem, your team, and the constraints you're actually operating under — before proposing anything.",
+  },
+  {
+    title: "Engagement & Proposal",
+    desc: "A scoped plan built around your actual problem, not a generic AI playbook. You know exactly what you're getting and why.",
+  },
+  {
+    title: "Embedded Delivery",
+    desc: "A forward-deployed engineer embeds directly with your team, solves the real problem with AI, and teaches your team to do the same along the way — embed, solve, and skill up.",
+  },
+  {
+    title: "Pilot-to-Production Acceleration",
+    desc: "We harden what worked into something that survives real production traffic, real data, and real security and compliance sign-off.",
+  },
+];
+---
+
+<Layout
+  title="How We Work"
+  description="How CausewayAI engages with clients: initial consultation, engagement and proposal, embedded delivery, and pilot-to-production acceleration."
+  current="how-we-work"
+>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">How We Work</p>
+      <h1>How we engage, from first conversation to production.</h1>
+      <p class="lead">
+        This is our process for working with your team — not a slide deck, an actual engagement
+        model built around embedding, solving your real problem, and leaving your team better
+        equipped than we found them. For the capabilities we bring to each engagement, see
+        {" "}<a href={withBase("/services")}>our services</a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="timeline">
+        {steps.map((step) => (
+          <div class="timeline-item">
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to talk through your situation?</h2>
+        <p>Tell us where you're stuck, and we'll walk you through how an engagement would actually work.</p>
+        <div class="hero-actions">
+          <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

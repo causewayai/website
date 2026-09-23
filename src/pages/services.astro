@@ -2,79 +2,126 @@
 import Layout from "../layouts/Layout.astro";
 import { withBase } from "../lib/url";
 
-const services = [
+const competencies = [
   {
-    title: "Forward-Deployed AI Engineering",
-    desc: "Senior engineers embed directly with your team and your codebase — not off in a separate innovation lab. We ship inside your existing stack, tools, and review processes, so what we build is something your team can actually own the day we leave.",
-    points: [
-      "Embedded, hands-on engineering — not slideware or workshops",
-      "Works within your existing tooling, security, and review process",
-      "Knowledge transfer built in from day one",
-    ],
+    id: "analysis-design",
+    title: "Analysis & Design",
+    desc: "We start with the problem worth solving, not the model that's trendy. Requirements, data flows, and system design happen before a line of AI code ships.",
   },
   {
-    title: "AI Operating Model & Best Practices",
-    desc: "Most AI failures are operating-model failures: unclear ownership, missing evaluation criteria, no guardrails for what the model is and isn't allowed to do. We design the governance, review, and evaluation practices that let AI adoption scale safely.",
-    points: [
-      "Governance and approval workflows suited to regulated environments",
-      "Evaluation and monitoring practices for production AI systems",
-      "Risk, security, and compliance built in, not bolted on",
-    ],
+    id: "qa-automation",
+    title: "QA Automation",
+    desc: "Automated testing and evaluation pipelines that catch regressions before your customers do — built for systems where \"it looked right in the demo\" isn't good enough.",
   },
   {
-    title: "Pilot-to-Production Acceleration",
-    desc: "A promising demo and a production system are two different things. We take pilots that stalled — or that leadership is nervous about shipping — and re-engineer them to meet the bar your IT, security, and compliance teams actually require.",
-    points: [
-      "Hardening pilots for real production traffic and data",
-      "Closing the gaps that block security and compliance sign-off",
-      "Clear handoff so the system doesn't depend on us forever",
-    ],
+    id: "cybersecurity",
+    title: "Cybersecurity",
+    desc: "Secure-by-design engineering for the systems AI touches — threat modeling, access controls, and audit trails built in from day one.",
+  },
+  {
+    id: "llm-training",
+    title: "LLM Training & Deployment",
+    desc: "Fine-tuning, evaluation, and production deployment of language models inside your infrastructure, with the monitoring and guardrails regulated environments require.",
+  },
+  {
+    id: "ai-adoption",
+    title: "AI Adoption",
+    desc: "The organizational side of AI: governance, ownership, and the operating-model changes that make adoption stick instead of stalling in pilot purgatory.",
   },
 ];
 ---
 
 <Layout
   title="Services"
-  description="Forward-deployed AI engineering, operating model design, and pilot-to-production acceleration for enterprise teams adopting AI."
+  description="Core AI engineering competencies: analysis and design, QA automation, cybersecurity, LLM training and deployment, and AI adoption."
   current="services"
 >
   <section class="page-hero">
     <div class="wrap">
       <p class="eyebrow">Services</p>
-      <h1>Engineering support built for how enterprises actually adopt AI.</h1>
+      <h1>The capabilities behind every engagement.</h1>
       <p class="lead">
-        We don't hand you a strategy deck and disappear. CausewayAI engineers work alongside your
-        team to design, build, and operationalize AI systems that hold up under real production
-        conditions — and real regulatory scrutiny.
+        These are the core competencies our engineers bring to your team. For how we actually
+        run an engagement from first call to production, see
+        {" "}<a href={withBase("/how-we-work")}>how we work</a>.
       </p>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="timeline">
-        {services.map((service) => (
-          <div class="timeline-item">
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-            <ul style="color: var(--slate-600); padding-left: 20px; margin: 0;">
-              {service.points.map((point) => (
-                <li style="margin-bottom: 6px;">{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div class="section-head">
+        <p class="eyebrow">How it fits together</p>
+        <h2>Everything feeds AI adoption that actually sticks.</h2>
+      </div>
+      <div class="hub-diagram-wrap">
+      <svg
+        class="hub-diagram"
+        viewBox="0 0 640 420"
+        role="img"
+        aria-labelledby="hub-diagram-title"
+      >
+        <title id="hub-diagram-title">
+          AI Adoption at the center, supported by Analysis &amp; Design, QA Automation,
+          Cybersecurity, and LLM Training &amp; Deployment
+        </title>
+        <line x1="320" y1="210" x2="320" y2="100" class="hub-spoke-line" />
+        <line x1="320" y1="210" x2="430" y2="210" class="hub-spoke-line" />
+        <line x1="320" y1="210" x2="320" y2="320" class="hub-spoke-line" />
+        <line x1="320" y1="210" x2="210" y2="210" class="hub-spoke-line" />
+
+        <g class="hub-spoke">
+          <circle cx="320" cy="80" r="52" />
+          <text x="320" y="76" text-anchor="middle">Analysis</text>
+          <text x="320" y="94" text-anchor="middle">&amp; Design</text>
+        </g>
+        <g class="hub-spoke">
+          <circle cx="450" cy="210" r="52" />
+          <text x="450" y="206" text-anchor="middle">QA</text>
+          <text x="450" y="224" text-anchor="middle">Automation</text>
+        </g>
+        <g class="hub-spoke">
+          <circle cx="320" cy="340" r="52" />
+          <text x="320" y="336" text-anchor="middle">Cyber</text>
+          <text x="320" y="354" text-anchor="middle">security</text>
+        </g>
+        <g class="hub-spoke">
+          <circle cx="190" cy="210" r="52" />
+          <text x="190" y="200" text-anchor="middle">LLM Training</text>
+          <text x="190" y="218" text-anchor="middle">&amp; Deployment</text>
+        </g>
+
+        <g class="hub-center">
+          <circle cx="320" cy="210" r="66" />
+          <text x="320" y="206" text-anchor="middle">AI</text>
+          <text x="320" y="226" text-anchor="middle">Adoption</text>
+        </g>
+      </svg>
       </div>
     </div>
   </section>
 
   <section class="alt">
     <div class="wrap">
+      <div class="grid grid-3">
+        {competencies.map((c) => (
+          <div class="card" id={c.id}>
+            <h3>{c.title}</h3>
+            <p>{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
       <div class="cta-band">
         <h2>Not sure which engagement fits?</h2>
         <p>Send us a few sentences about where you're stuck, and we'll point you to the right starting place.</p>
         <div class="hero-actions">
           <a href={withBase("/contact")} class="btn btn-accent">Get in touch</a>
+          <a href={withBase("/how-we-work")} class="btn btn-outline">See how we engage</a>
         </div>
       </div>
     </div>

@@ -1,20 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { withBase } from "../lib/url";
-
-const industries = [
-  { name: "Retail IT", blurb: "Store systems, e-commerce, and supply chain operations." },
-  { name: "Life Sciences", blurb: "Research, clinical, and lab operations at scale." },
-  { name: "Food Services", blurb: "Operations, safety, and logistics under tight margins." },
-  { name: "Pharmaceuticals", blurb: "Regulated manufacturing, quality, and compliance." },
-  { name: "Insurance", blurb: "Underwriting, claims, and risk operations." },
-  { name: "Cybersecurity", blurb: "Threat operations and secure-by-design engineering." },
-];
+import { industries } from "../lib/industries";
 ---
 
 <Layout
   title="Forward-Deployed AI Engineering for the Enterprise"
-  description="CausewayAI embeds forward-deployed engineers with your team to operationalize AI, backed by 25 years of enterprise experience across retail, life sciences, food service, pharma, insurance, and cybersecurity."
+  description="CausewayAI embeds forward-deployed engineers with your team to operationalize AI, backed by 25 years of enterprise experience across pharma, life sciences, financial services, insurance, retail, cybersecurity, and hospitality."
   current="home"
 >
   <section class="hero">
@@ -29,18 +21,26 @@ const industries = [
         </p>
         <div class="hero-actions">
           <a href={withBase("/contact")} class="btn btn-accent">Talk to an engineer</a>
-          <a href={withBase("/services")} class="btn btn-outline">See how we work</a>
+          <a href={withBase("/how-we-work")} class="btn btn-outline">See how we engage</a>
         </div>
       </div>
       <div class="hero-stats">
-        <div class="stat-card">
+        <a
+          href={withBase("/industries")}
+          class="stat-card stat-card-link"
+          aria-label="Enterprise engineering experience — view industries"
+        >
           <div class="num">25 yrs</div>
           <p class="label">Enterprise engineering experience</p>
-        </div>
-        <div class="stat-card">
-          <div class="num">6</div>
+        </a>
+        <a
+          href={withBase("/industries")}
+          class="stat-card stat-card-link"
+          aria-label="Regulated industries served — view industries"
+        >
+          <div class="num">{industries.length}</div>
           <p class="label">Regulated industries served</p>
-        </div>
+        </a>
         <div class="stat-card">
           <div class="num">Embedded</div>
           <p class="label">Engineers work inside your stack</p>

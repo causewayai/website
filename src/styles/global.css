@@ -238,6 +238,29 @@ nav.main-nav a[aria-current="page"] {
   margin: 0;
 }
 
+.stat-card-link {
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.stat-card-link .label {
+  text-decoration: underline;
+  text-decoration-color: var(--slate-400);
+  text-underline-offset: 3px;
+}
+
+.stat-card-link:hover,
+.stat-card-link:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.stat-card-link:hover .label,
+.stat-card-link:focus-visible .label {
+  text-decoration-color: var(--accent);
+}
+
 /* Sections */
 section {
   padding: 72px 0;
@@ -294,6 +317,46 @@ section.alt {
   justify-content: center;
   font-weight: 800;
   margin-bottom: 16px;
+}
+
+.hub-diagram-wrap {
+  overflow-x: auto;
+}
+
+.hub-diagram {
+  width: 100%;
+  max-width: 560px;
+  min-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hub-spoke-line {
+  stroke: var(--slate-200);
+  stroke-width: 2;
+}
+
+.hub-spoke circle {
+  fill: var(--white);
+  stroke: var(--navy-700);
+  stroke-width: 2;
+}
+
+.hub-spoke text {
+  fill: var(--slate-600);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hub-center circle {
+  fill: var(--navy-900);
+}
+
+.hub-center text {
+  fill: var(--white);
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .industry-list {
