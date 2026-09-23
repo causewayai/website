@@ -19,7 +19,7 @@ export const industries: Industry[] = [
   },
   {
     name: "Financial Services",
-    blurb: "Regulatory reporting, risk, and transaction systems under strict compliance demands.",
+    blurb: "Regulatory reporting, risk, and transaction operations.",
     longBlurb:
       "Regulatory reporting, risk management, and transaction processing where compliance and auditability aren't optional. We build AI systems your risk and compliance teams can actually sign off on.",
   },
