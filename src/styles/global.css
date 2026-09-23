@@ -319,6 +319,41 @@ section.alt {
   margin-bottom: 16px;
 }
 
+.hub-diagram {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hub-spoke-line {
+  stroke: var(--slate-200);
+  stroke-width: 2;
+}
+
+.hub-spoke circle {
+  fill: var(--white);
+  stroke: var(--navy-700);
+  stroke-width: 2;
+}
+
+.hub-spoke text {
+  fill: var(--slate-600);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hub-center circle {
+  fill: var(--navy-900);
+}
+
+.hub-center text {
+  fill: var(--white);
+  font-size: 15px;
+  font-weight: 800;
+}
+
 .industry-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
