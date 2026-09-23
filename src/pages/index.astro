@@ -1,20 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { withBase } from "../lib/url";
-
-const industries = [
-  { name: "Retail IT", blurb: "Store systems, e-commerce, and supply chain operations." },
-  { name: "Life Sciences", blurb: "Research, clinical, and lab operations at scale." },
-  { name: "Food Services", blurb: "Operations, safety, and logistics under tight margins." },
-  { name: "Pharmaceuticals", blurb: "Regulated manufacturing, quality, and compliance." },
-  { name: "Insurance", blurb: "Underwriting, claims, and risk operations." },
-  { name: "Cybersecurity", blurb: "Threat operations and secure-by-design engineering." },
-];
+import { industries } from "../lib/industries";
 ---
 
 <Layout
   title="Forward-Deployed AI Engineering for the Enterprise"
-  description="CausewayAI embeds forward-deployed engineers with your team to operationalize AI, backed by 25 years of enterprise experience across retail, life sciences, food service, pharma, insurance, and cybersecurity."
+  description="CausewayAI embeds forward-deployed engineers with your team to operationalize AI, backed by 25 years of enterprise experience across pharma, life sciences, financial services, insurance, retail, cybersecurity, and hospitality."
   current="home"
 >
   <section class="hero">
